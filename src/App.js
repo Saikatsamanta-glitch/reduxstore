@@ -2,11 +2,11 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Cart from "./pages/Cart/Cart";
 import Navbar from "./components/Navbar";
-import { Provider } from "react-redux";
-import {store} from "./redux/store";
+
+
 function App() {
   return (
-    <Provider store={store}>
+   
     <BrowserRouter>
     <Navbar/>
       <Routes>
@@ -15,7 +15,7 @@ function App() {
         <Route path="*" element={<h1>404 page error</h1>} />
       </Routes>
     </BrowserRouter>
-    </Provider>
+
   );
 }
 

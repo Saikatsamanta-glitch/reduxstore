@@ -1,13 +1,13 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 export default function Navbar() {
-    const product = useSelector(store => store);
-    console.log(product)
+  const navigate = useNavigate();
+
   return (
     <nav className="h-12 border flex items-center px-5">
-      <div>Navbar</div>
-      <div className="ms-auto flex">
-        <p>1</p>
+      <div className="cursor-pointer" onClick={()=>{navigate('/')}}>Navbar</div>
+      <div className="ms-auto flex cursor-pointer" onClick={()=>{navigate('/cart')}}>
+        <p>0</p>
         <i className="fi fi-rr-shopping-cart "></i>
       </div>
     </nav>
